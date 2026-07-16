@@ -1,0 +1,19 @@
+/*my owns*/
+      @media (max-width: 899px) {
+        .intergrupo_norte {
+          display: none;
+        }
+      }
+
+
+      /*sombras en fotos*/
+      
+      .site-cover.overlay:before {
+	    background: rgba(0, 0, 0, 0.3);
+	    position: absolute;
+	    content: "";
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+	}

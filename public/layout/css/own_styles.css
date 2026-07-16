@@ -1,0 +1,13 @@
+/*own styles*/
+#posts p{
+	line-height:10px; margin-left: 30px
+}
+#categorias_de_servicio ul{
+	list-style: none
+}
+
+#categorias_de_servicio ul li{
+	line-height:35px; /*border-bottom: 1px dotted*/
+}
+
+
