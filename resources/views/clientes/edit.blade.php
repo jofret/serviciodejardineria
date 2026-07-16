@@ -6,7 +6,7 @@
  		<div class="col-lg-10">
  			<div class="card" style="width: 100%">
  				<div class="card-header">
- 					Editar Categoría
+ 					Editar Cliente
  				</div>
  				<div class="card-body">
 				    {!! Form::model($cliente,['route' => ['clientes.update', $cliente->id],
