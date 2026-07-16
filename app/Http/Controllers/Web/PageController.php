@@ -170,25 +170,4 @@ class PageController extends Controller
         return view('admin.index');
     }
 
-    //simple_routes
-
-    public function enunciado(){
-        $posts = Post::orderBy('id','DESC')->where('status','PUBLISHED')->paginate(2);
-        $categories = Category::orderBy('id', 'ASC')->paginate();
-        return view('simple_routes.enunciado', compact('posts','categories'));
-    }
-
-    public function esaaparaustedTestAlcoholismo(){
-        $posts = Post::orderBy('id','DESC')->where('status','PUBLISHED')->paginate(2);
-        $categories = Category::orderBy('id', 'ASC')->paginate();
-        return view('simple_routes.esaaparausted12preguntas', compact('posts','categories'));
-    }
-    
-
-    public function esaaparausted(){
-        $posts = Post::orderBy('id','DESC')->where('status','PUBLISHED')->paginate(2);
-        $categories = Category::orderBy('id', 'ASC')->paginate();
-        return view('simple_routes.esaaparaustedcontinuacion', compact('posts','categories'));
-    }
-    
 }
