@@ -44,7 +44,8 @@ Route::get('categoria/{slug}', [PageController::class, 'category'])->name('categ
 Route::get('tag/{slug}', [PageController::class, 'tag'])->name('tag');
 
 
-Auth::routes();
+// register:false -> alta de admins deshabilitada, no debe ser autoservicio publico
+Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
@@ -56,7 +57,7 @@ Route::resource('categories', CategoryController::class);
 Route::resource('posts', PostController::class);
 
 
-Route::resource('images', ImageController::class);
+Route::resource('images', ImageController::class)->except(['create']);
 
 
 //*******clientesSatisfechos
