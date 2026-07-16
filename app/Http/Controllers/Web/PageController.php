@@ -122,7 +122,8 @@ class PageController extends Controller
 
         $categories = Category::orderBy('id', 'ASC')->paginate();
         $tags = Tag::orderBy('id', 'ASC')->get();
-        return view('web.posts', compact('busqueda','category','categories','tags','posts','recientesPosts'));
+        $clientes = Cliente::orderBy('id','DESC')->where('status','PUBLISHED')->get();
+        return view('web.posts', compact('busqueda','category','categories','tags','posts','recientesPosts','clientes'));
 
     }
 
@@ -131,13 +132,14 @@ class PageController extends Controller
         $recientesPosts=Post::orderBy('id','DESC')->where('status','PUBLISHED')->paginate(6);
         $posts  = Post::whereHas('tags', function($query) use ($slug){
             $query->where('slug', $slug);
-        
+
 
         })->orderBy('id','DESC')->where('status','PUBLISHED')->paginate(9);
         $categories = Category::orderBy('id', 'ASC')->paginate();
         $tags = Tag::orderBy('id', 'ASC')->get();
+        $clientes = Cliente::orderBy('id','DESC')->where('status','PUBLISHED')->get();
 
-        return view('web.posts', compact('busqueda','posts','categories','tags','recientesPosts'));
+        return view('web.posts', compact('busqueda','posts','categories','tags','recientesPosts','clientes'));
 
     }
 

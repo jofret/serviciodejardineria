@@ -40,7 +40,7 @@
                     <div class="team-item rounded">
                         <img class="img-fluid" src="{{$post->image->file}}" alt="{{$post->image->name}}">
                         <div class="team-text">
-                            <a href=""><p class="text-primary">{{$post->category->name}}</p></a>
+                            <a href="{{ route('category', $post->category->slug) }}"><p class="text-primary">{{$post->category->name}}</p></a>
                             <h4 class="mb-0">{{$post->name}}</h4>
                             <div class="team-social d-flex">
                                 <a class="btn btn-success" href="{{route('post',$post->slug)}}#publicacion">Ver más</a>

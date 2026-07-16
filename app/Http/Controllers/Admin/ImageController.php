@@ -111,6 +111,7 @@ class ImageController extends Controller
     public function update(ImageUpdateRequest $request, $id)
     {
         $image = Image::find($id);
+        $post = Post::find($id);
         $this->authorize('pass', $post);
         $image->fill($request->all())->save();
 

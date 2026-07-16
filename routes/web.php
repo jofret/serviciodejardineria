@@ -39,6 +39,10 @@ Route::get('publicaciones/{slug}', [PageController::class, 'post'])->name('post'
 
 Route::get('publicaciones', [PageController::class, 'posts'])->name('posts');
 
+Route::get('categoria/{slug}', [PageController::class, 'category'])->name('category');
+
+Route::get('tag/{slug}', [PageController::class, 'tag'])->name('tag');
+
 
 Auth::routes();
 
