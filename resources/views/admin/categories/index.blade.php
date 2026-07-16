@@ -36,7 +36,7 @@
 				    				</a>
 				    			</td>
 				    			<td width="10px">
-				    				{!! Form::open(['route'=>['categories.destroy', $category->id], 'method' => 'DELETE']) !!}
+				    				{!! Form::open(['route'=>['categories.destroy', $category->id], 'method' => 'DELETE', 'onsubmit' => 'return confirm("¿Eliminar esta categoría? Esto borra también TODAS sus publicaciones, imágenes y etiquetas asociadas. Esta acción no se puede deshacer.")']) !!}
 				    					<button class="btn btn-danger btn-sm">
 				    						Eliminar
 				    					</button>

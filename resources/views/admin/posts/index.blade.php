@@ -36,7 +36,7 @@
 				    				</a>
 				    			</td>
 				    			<td width="10px">
-				    				{!! Form::open(['route'=>['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
+				    				{!! Form::open(['route'=>['posts.destroy', $post->id], 'method' => 'DELETE', 'onsubmit' => 'return confirm("¿Eliminar esta publicación? Esta acción no se puede deshacer.")']) !!}
 				    					<button class="btn btn-danger btn-sm">
 				    						Eliminar
 				    					</button>

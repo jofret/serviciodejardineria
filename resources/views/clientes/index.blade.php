@@ -35,7 +35,7 @@
 				    				</a>
 				    			</td>
 				    			<td width="10px">
-				    				{!! Form::open(['route'=>['clientes.destroy', $cliente->id], 'method' => 'DELETE']) !!}
+				    				{!! Form::open(['route'=>['clientes.destroy', $cliente->id], 'method' => 'DELETE', 'onsubmit' => 'return confirm("¿Eliminar este comentario de cliente? Esta acción no se puede deshacer.")']) !!}
 				    					<button class="btn btn-danger btn-sm">
 				    						Eliminar
 				    					</button>

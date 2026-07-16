@@ -36,7 +36,7 @@
 				    				</a>
 				    			</td>
 				    			<td width="10px">
-				    				{!! Form::open(['route'=>['tags.destroy', $tag->id], 'method' => 'DELETE']) !!}
+				    				{!! Form::open(['route'=>['tags.destroy', $tag->id], 'method' => 'DELETE', 'onsubmit' => 'return confirm("¿Eliminar esta etiqueta? Esta acción no se puede deshacer.")']) !!}
 				    					<button class="btn btn-danger btn-sm">
 				    						Eliminar
 				    					</button>

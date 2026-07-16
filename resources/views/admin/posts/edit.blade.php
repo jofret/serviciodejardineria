@@ -31,7 +31,7 @@
 								      <td>{{$image->name}}</td>
 								      <td><img src="{{$image->file}}" width=100></td>
 								      <td>
-								      	{!! Form::open(['route'=>['images.destroy', $image->id], 'method' => 'DELETE']) !!}
+								      	{!! Form::open(['route'=>['images.destroy', $image->id], 'method' => 'DELETE', 'onsubmit' => 'return confirm("¿Eliminar esta imagen? Esta acción no se puede deshacer.")']) !!}
 					    					<button class="btn btn-danger btn-sm">
 					    						Eliminar
 					    					</button>
